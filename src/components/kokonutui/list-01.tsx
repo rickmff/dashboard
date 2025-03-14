@@ -58,7 +58,7 @@ export default function List01({ totalBalance = "$26,540.25", accounts = ACCOUNT
     <div
       className={cn(
         "w-full max-w-xl mx-auto",
-        "bg-white dark:bg-zinc-900/70",
+        "bg-background dark:bg-zinc-900/70",
         "border border-zinc-100 dark:border-zinc-800",
         "rounded-xl shadow-sm backdrop-blur-xl",
         className,

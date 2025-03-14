@@ -4,67 +4,206 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Base Colors */
+    --background: #F8F8F8;
+    --foreground: #020817;
+    --background-inner: #f0f0f0;
+
+    /* Card Colors */
+    --card: #FFFFFF;
+    --card-foreground: #020817;
+    --card-muted: #F1F5F9;
+    --card-hover: #E2E8F0;
+
+    /* Primary Colors */
+    --primary: #1E293B;
+    --primary-foreground: #F8FAFC;
+    --primary-muted: #F1F5F9;
+
+    /* Secondary Colors */
+    --secondary: #F1F5F9;
+    --secondary-foreground: #1E293B;
+
+    /* Muted Colors */
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+
+    /* Accent Colors */
+    --accent: #F1F5F9;
+    --accent-foreground: #1E293B;
+
+    /* Border Colors */
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #020817;
+
+    /* Status Colors */
+    --success: #10B981;
+    --success-foreground: #F8FAFC;
+    --warning: #F59E0B;
+    --warning-foreground: #F8FAFC;
+    --error: #EF4444;
+    --error-foreground: #F8FAFC;
+    --destructive: #EF4444;
+    --destructive-foreground: #F8FAFC;
+
+    /* Popover */
+    --popover: #FFFFFF;
+    --popover-foreground: #020817;
+
+    /* Shadows */
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --card-hover-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+    /* Glow Effects */
+    --glow-success: 0 0 15px rgba(16, 185, 129, 0.35);
+    --glow-error: 0 0 15px rgba(239, 68, 68, 0.35);
+    --glow-primary: 0 0 15px rgba(14, 165, 233, 0.35);
+
+    /* Border Radius */
     --radius: 0.5rem;
 
     /* Chart colors */
-    --chart-1: 221.2 83.2% 53.3%;
-    --chart-2: 142.1 76.2% 36.3%;
-    --chart-3: 31.8 81.3% 54.9%;
-    --chart-4: 262.1 83.3% 57.8%;
-    --chart-5: 291.1 92.5% 72.9%;
-    --chart-6: 230.5 83.1% 53.9%;
-    --chart-7: 217.2 91.2% 59.8%;
-    --chart-8: 224.3 76.3% 48%;
+    --chart-1: #3B82F6;
+    --chart-2: #22C55E;
+    --chart-3: #F97316;
+    --chart-4: #8B5CF6;
+    --chart-5: #EC4899;
+    --chart-6: #3B82F6;
+    --chart-7: #38BDF8;
+    --chart-8: #4F46E5;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: #090909;
+    --foreground: #F8FAFC;
+    --background-inner: #000000;
+
+    --card: #0d0d0d;
+    --card-foreground: #F8FAFC;
+    --card-muted: #1E293B;
+    --card-hover: #1E293B;
+
+    --primary: #F8FAFC;
+    --primary-foreground: #1E293B;
+    --primary-muted: #1E293B;
+
+    --secondary: #1E293B;
+    --secondary-foreground: #F8FAFC;
+
+    --muted: #1E293B;
+    --muted-foreground: #94A3B8;
+
+    --accent: #1E293B;
+    --accent-foreground: #F8FAFC;
+
+    --border: #1E293B;
+    --input: #1E293B;
+
+    --success: #10B981;
+    --success-foreground: #F8FAFC;
+    --warning: #F59E0B;
+    --warning-foreground: #F8FAFC;
+    --error: #EF4444;
+    --error-foreground: #F8FAFC;
+    --destructive: #991B1B;
+    --destructive-foreground: #F8FAFC;
+
+    --popover: #020817;
+    --popover-foreground: #F8FAFC;
+
+    /* Glow Effects - Dark Mode */
+    --glow-success: 0 0 15px rgba(16, 185, 129, 0.2);
+    --glow-error: 0 0 15px rgba(239, 68, 68, 0.2);
+    --glow-primary: 0 0 15px rgba(14, 165, 233, 0.2);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .card-base {
+    @apply bg-card border border-border rounded-lg shadow-card transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card;
+  }
+  .card-hover:hover {
+    @apply shadow-card-hover;
+    border-color: #0EA5E933; /* Primary color with 0.2 opacity */
+  }
+
+  .card-glow {
+    @apply shadow-card backdrop-blur-sm border border-transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .glow-success {
+    box-shadow: var(--glow-success);
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+
+  .glow-success:hover {
+    box-shadow: var(--glow-success), 0 0 30px rgba(16, 185, 129, 0.4);
+    border-color: rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .glow-error {
+    box-shadow: var(--glow-error);
+    border-color: rgba(239, 68, 68, 0.3);
+  }
+
+  .glow-error:hover {
+    box-shadow: var(--glow-error), 0 0 30px rgba(239, 68, 68, 0.4);
+    border-color: rgba(239, 68, 68, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    @apply flex items-center justify-between p-4 border-b border-border;
+  }
+
+  .card-content {
+    @apply p-4;
+  }
+
+  .icon-container {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center;
+    background-color: #0EA5E91A; /* Primary color with 0.1 opacity */
+  }
+
+  .icon-container-sm {
+    @apply w-8 h-8 rounded-full flex items-center justify-center;
+  }
+
+  .heading-lg {
+    @apply text-lg font-bold text-foreground;
+  }
+
+  .heading-md {
+    @apply text-base font-semibold text-foreground;
+  }
+
+  .text-base {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .metric-value {
+    @apply text-2xl font-bold text-foreground;
+  }
+
+  .metric-label {
+    @apply text-sm font-medium text-muted-foreground;
+  }
+
+  .metric-change {
+    @apply text-xs text-muted-foreground mt-1;
   }
 }
 
