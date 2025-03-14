@@ -1,0 +1,92 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "from": "from",
+    "lastMonth": "last month"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "analytics": "Analytics",
+    "organization": "Organization",
+    "projects": "Projects",
+    "transactions": "Transactions",
+    "invoices": "Invoices",
+    "payments": "Payments",
+    "settings": "Settings",
+    "help": "Help"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "viewDetails": "View Details",
+    "tooltips": {
+      "netWorthHistory": "Net Worth History",
+      "incomeHistory": "Income History",
+      "expenseHistory": "Expense History",
+      "savingsRateHistory": "Savings Rate History"
+    },
+    "cards": {
+      "netWorth": {
+        "label": "Net Worth",
+        "change": "+2.5% from last month"
+      },
+      "monthlyIncome": {
+        "label": "Monthly Income",
+        "change": "+5% from last month"
+      },
+      "monthlyExpenses": {
+        "label": "Monthly Expenses",
+        "change": "-3% from last month"
+      },
+      "savingsRate": {
+        "label": "Savings Rate",
+        "change": "+2% from last month"
+      }
+    },
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun",
+      "jul": "Jul",
+      "aug": "Aug",
+      "sep": "Sep",
+      "oct": "Oct",
+      "nov": "Nov",
+      "dec": "Dec"
+    }
+  },
+  "home": {
+    "hero": {
+      "launching": "Launching on Product Hunt Soon",
+      "title": "Your All-in-One Dashboard Solution",
+      "description": "Transform your data into actionable insights. Powerful analytics, beautiful visualizations, and seamless integration—all in one place.",
+      "getStarted": "Get Started",
+      "viewPricing": "View Pricing"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "description": "Everything you need to analyze, visualize, and act on your data.",
+      "realTimeAnalytics": {
+        "title": "Real-time Analytics",
+        "description": "Get instant insights with our real-time data processing and analytics engine."
+      },
+      "customDashboards": {
+        "title": "Custom Dashboards",
+        "description": "Build and customize dashboards that match your exact needs and workflows."
+      },
+      "teamCollaboration": {
+        "title": "Team Collaboration",
+        "description": "Work together seamlessly with built-in collaboration tools and sharing features."
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of teams who are already using our platform to drive better decisions.",
+      "button": "Start Your Free Trial"
+    }
+  }
+}

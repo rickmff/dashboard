@@ -1,0 +1,92 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "from": "em relação a",
+    "lastMonth": "mês passado"
+  },
+  "navigation": {
+    "dashboard": "Painel",
+    "analytics": "Análises",
+    "organization": "Organização",
+    "projects": "Projetos",
+    "transactions": "Transações",
+    "invoices": "Faturas",
+    "payments": "Pagamentos",
+    "settings": "Configurações",
+    "help": "Ajuda"
+  },
+  "dashboard": {
+    "title": "Painel",
+    "viewDetails": "Ver Detalhes",
+    "tooltips": {
+      "netWorthHistory": "Histórico de Patrimônio Líquido",
+      "incomeHistory": "Histórico de Receitas",
+      "expenseHistory": "Histórico de Despesas",
+      "savingsRateHistory": "Histórico da Taxa de Poupança"
+    },
+    "cards": {
+      "netWorth": {
+        "label": "Patrimônio Líquido",
+        "change": "+2,5% em relação ao mês passado"
+      },
+      "monthlyIncome": {
+        "label": "Receita Mensal",
+        "change": "+5% em relação ao mês passado"
+      },
+      "monthlyExpenses": {
+        "label": "Despesas Mensais",
+        "change": "-3% em relação ao mês passado"
+      },
+      "savingsRate": {
+        "label": "Taxa de Poupança",
+        "change": "+2% em relação ao mês passado"
+      }
+    },
+    "months": {
+      "jan": "Jan",
+      "feb": "Fev",
+      "mar": "Mar",
+      "apr": "Abr",
+      "may": "Mai",
+      "jun": "Jun",
+      "jul": "Jul",
+      "aug": "Ago",
+      "sep": "Set",
+      "oct": "Out",
+      "nov": "Nov",
+      "dec": "Dez"
+    }
+  },
+  "home": {
+    "hero": {
+      "launching": "Em breve no Product Hunt",
+      "title": "Sua Solução de Painel Tudo-em-Um",
+      "description": "Transforme seus dados em insights acionáveis. Análises poderosas, visualizações bonitas e integração perfeita—tudo em um só lugar.",
+      "getStarted": "Começar",
+      "viewPricing": "Ver Preços"
+    },
+    "features": {
+      "title": "Recursos Poderosos",
+      "description": "Tudo o que você precisa para analisar, visualizar e agir sobre seus dados.",
+      "realTimeAnalytics": {
+        "title": "Análises em Tempo Real",
+        "description": "Obtenha insights instantâneos com nosso processamento de dados e mecanismo de análise em tempo real."
+      },
+      "customDashboards": {
+        "title": "Painéis Personalizados",
+        "description": "Construa e personalize painéis que correspondam exatamente às suas necessidades e fluxos de trabalho."
+      },
+      "teamCollaboration": {
+        "title": "Colaboração em Equipe",
+        "description": "Trabalhe em conjunto de forma perfeita com ferramentas de colaboração integradas e recursos de compartilhamento."
+      }
+    },
+    "cta": {
+      "title": "Pronto para Começar?",
+      "description": "Junte-se a milhares de equipes que já estão usando nossa plataforma para tomar melhores decisões.",
+      "button": "Inicie sua Avaliação Gratuita"
+    }
+  }
+}

@@ -6,6 +6,10 @@ import { Bell, ChevronRight } from "lucide-react"
 import Profile01 from "./profile-01"
 import Link from "next/link"
 import { ThemeToggle } from "../theme-toggle"
+import { LanguageSwitcher } from "../language-switcher"
+import { useI18n } from "@/i18n/client"
+import { usePathname } from "next/navigation"
+import { getPathWithoutLocale } from "@/i18n/settings"
 
 interface BreadcrumbItem {
   label: string
@@ -13,9 +17,12 @@ interface BreadcrumbItem {
 }
 
 export default function TopNav() {
+  const { t, locale } = useI18n();
+  const pathname = usePathname();
+
   const breadcrumbs: BreadcrumbItem[] = [
-    { label: "kokonutUI", href: "#" },
-    { label: "dashboard", href: "#" },
+    { label: "kokonutUI", href: `/${locale}` },
+    { label: t('dashboard.title'), href: `/${locale}${getPathWithoutLocale(pathname)}` },
   ]
 
   return (
@@ -45,6 +52,8 @@ export default function TopNav() {
         >
           <Bell className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600 dark:text-gray-300" />
         </button>
+
+        <LanguageSwitcher />
 
         <ThemeToggle />
 
