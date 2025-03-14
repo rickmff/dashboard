@@ -133,17 +133,12 @@ function NavItem({
   bgColor: string
   hoverColor: string
 }) {
-  const { locale, t } = useI18n();
+  const { t } = useI18n();
   const IconComponent = Icons[icon] as React.ElementType
-
-  // Add locale prefix to href if it's a valid path and not just a placeholder
-  const localizedHref = href.startsWith('/') && href !== '#'
-    ? `/${locale}${href}`
-    : href;
 
   return (
     <Link
-      href={localizedHref}
+      href={href}
       onClick={onNavigate}
       className={cn(
         "group flex items-center pr-3 pl-1 py-1 text-sm rounded-md transition-all opacity-70 hover:opacity-100 duration-300",
@@ -184,7 +179,7 @@ export default function Sidebar() {
       >
         <div className="h-full flex flex-col">
           <Link
-            href={`/${locale}`}
+            href="/"
             className="h-16 px-6 flex items-center"
           >
             <span className="text-lg font-semibold hover:cursor-pointer">

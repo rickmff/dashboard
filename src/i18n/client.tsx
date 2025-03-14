@@ -1,8 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import { Locale, defaultLocale, getLocaleFromPathname, locales } from './settings';
+import { Locale, defaultLocale } from './settings';
 
 // Import translations
 import enTranslations from './locales/en.json';
@@ -56,14 +55,18 @@ interface I18nProviderProps {
 }
 
 export function I18nProvider({ children }: I18nProviderProps) {
-  const pathname = usePathname();
-  const router = useRouter();
+  // Get initial locale from localStorage or browser preference
+  const [locale, setLocale] = useState<Locale>(defaultLocale);
 
-  // Determine initial locale from pathname or browser
-  const pathnameLocale = pathname ? getLocaleFromPathname(pathname) : undefined;
-  const initialLocale = pathnameLocale || (typeof window !== 'undefined' ? detectBrowserLanguage() : defaultLocale);
+  // Initialize locale on client side
+  useEffect(() => {
+    const savedLocale = localStorage.getItem('locale') as Locale | null;
+    const initialLocale = savedLocale || detectBrowserLanguage();
+    setLocale(initialLocale);
 
-  const [locale, setLocale] = useState<Locale>(initialLocale);
+    // Update document language attribute
+    document.documentElement.lang = initialLocale;
+  }, []);
 
   // Function to change locale
   const changeLocale = (newLocale: Locale) => {
@@ -71,26 +74,11 @@ export function I18nProvider({ children }: I18nProviderProps) {
 
     setLocale(newLocale);
 
-    // Update URL to reflect locale change
-    if (pathname) {
-      const segments = pathname.split('/').filter(Boolean);
-
-      if (segments.length > 0 && locales.includes(segments[0] as Locale)) {
-        // Replace the locale segment
-        segments[0] = newLocale;
-      } else {
-        // Add the locale segment
-        segments.unshift(newLocale);
-      }
-
-      const newPathname = `/${segments.join('/')}`;
-      router.push(newPathname);
-    }
+    // Save to localStorage
+    localStorage.setItem('locale', newLocale);
 
     // Update document language attribute
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = newLocale;
-    }
+    document.documentElement.lang = newLocale;
   };
 
   // Function to get a translation by key
@@ -109,23 +97,6 @@ export function I18nProvider({ children }: I18nProviderProps) {
     const localeString = locale === 'en' ? 'en-US' : 'pt-BR';
     return new Intl.DateTimeFormat(localeString, options).format(date);
   };
-
-  // Update document language attribute when locale changes
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = locale;
-    }
-  }, [locale]);
-
-  // Update locale when pathname changes
-  useEffect(() => {
-    if (pathname) {
-      const pathnameLocale = getLocaleFromPathname(pathname);
-      if (pathnameLocale && pathnameLocale !== locale) {
-        setLocale(pathnameLocale);
-      }
-    }
-  }, [pathname, locale]);
 
   return (
     <I18nContext.Provider

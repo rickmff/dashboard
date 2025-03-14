@@ -17,12 +17,12 @@ interface BreadcrumbItem {
 }
 
 export default function TopNav() {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   const pathname = usePathname();
 
   const breadcrumbs: BreadcrumbItem[] = [
-    { label: "kokonutUI", href: `/${locale}` },
-    { label: t('dashboard.title'), href: `/${locale}${getPathWithoutLocale(pathname)}` },
+    { label: "kokonutUI", href: "/" },
+    { label: t('dashboard.title'), href: pathname },
   ]
 
   return (
